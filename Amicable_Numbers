@@ -1,0 +1,22 @@
+list=[]
+sumArray=[]
+N= int(input("Please enter the number:  "))
+
+for a in range(1,N):
+  
+  myList=[x for x in range(1,a) if a%x == 0]
+  #my list is the list of exact divisors of a number
+
+  b=(sum(myList))
+  #b is the sum of the divisors of that number
+  myList2=[] 
+  myList2=[x for x in range(1,b) if b%x == 0]
+  
+
+  if sum(myList) ==b and sum(myList2) == a and a!= b :
+
+    if a+b not in sumArray:    
+      list.append([a,b])
+      sumArray.append(a+b)
+    
+print("Amicable numbers are/is ",list)  
