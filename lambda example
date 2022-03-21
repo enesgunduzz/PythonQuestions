@@ -1,0 +1,2 @@
+b = lambda *args: args.count(max(args, key = args.count)) if args.count(max(args, key = args.count)) > 1 else 0
+print(b(1,2,3,4,4,4,4))
