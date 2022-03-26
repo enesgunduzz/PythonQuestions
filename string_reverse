@@ -1,0 +1,10 @@
+def reverse(str, output=[]):
+    #range(start, stop, step)
+    for i in range(len(str) - 1, -1, -1):
+        output.append(str[i])
+
+    return "".join(output)
+
+
+text = str(input("please give me a sentence: "))
+print("Your reversed text is: {}".format(reverse(text)))
